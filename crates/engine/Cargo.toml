@@ -1,0 +1,27 @@
+[package]
+name = "pellet-engine"
+description = "The Pellet pipeline: stages, checks, composites, scoring and actions"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[dependencies]
+pellet-core.workspace = true
+pellet-check.workspace = true
+futures.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+pellet-check = { workspace = true, features = ["testing"] }
+async-trait.workspace = true
+tokio = { workspace = true, features = ["test-util"] }
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "library"

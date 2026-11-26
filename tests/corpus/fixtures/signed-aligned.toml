@@ -1,0 +1,24 @@
+description = "A DKIM-signed message from a domain with SPF and DMARC, sent from its own server"
+label = "ham"
+expect = ["SPF_ALLOW", "DKIM_SIGNED", "DKIM_ALLOW", "DMARC_POLICY_ALLOW"]
+absent = [
+  "SPF_FAIL", "DKIM_REJECT", "DKIM_PERMFAIL", "DMARC_POLICY_REJECT", "AUTH_NA",
+  "RDNS_NONE", "HELO_NOT_FQDN", "HELO_NORES_A_OR_MX", "HELO_IPREV_MISMATCH", "RBL_EXAMPLE",
+  "MISSING_FROM", "MISSING_MID",
+]
+
+[envelope]
+client_ip = "192.0.2.25"
+helo = "mail.example.com"
+mail_from = "ana@example.com"
+recipients = ["bo@example.org"]
+tls = true
+
+[dns]
+a = { "mail.example.com" = ["192.0.2.25"] }
+ptr = { "192.0.2.25" = ["mail.example.com"] }
+
+[dns.txt]
+"example.com" = ["v=spf1 ip4:192.0.2.0/24 -all"]
+"_dmarc.example.com" = ["v=DMARC1; p=reject"]
+"pellet._domainkey.example.com" = ["v=DKIM1; k=ed25519; p=11qYAYKxCrfVS/7TyWQHOg7hcvPapiMlrwIaaPcHURo="]

@@ -1,0 +1,7 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<p style="color:red">Styled paragraph text</p>   
+
+  <p>  Spaced   paragraph  </p>

@@ -1,0 +1,12 @@
+description = "Bulk mail sent by a script that writes almost no headers"
+label = "spam"
+expect = [
+  "MISSING_FROM", "MISSING_TO", "MISSING_SUBJECT", "MISSING_DATE", "MISSING_MID",
+  "MISSING_MIME_VERSION", "MISSING_ESSENTIAL_HEADERS",
+]
+
+[envelope]
+client_ip = "198.51.100.77"
+helo = "localhost"
+mail_from = "noreply@deals.example.net"
+recipients = ["bo@example.org"]

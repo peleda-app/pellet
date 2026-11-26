@@ -1,0 +1,20 @@
+description = "An unsigned message claiming to be from a domain with DMARC p=reject, from a listed host without reverse DNS"
+label = "spam"
+expect = [
+  "SPF_FAIL", "DKIM_NA", "DMARC_POLICY_REJECT", "RBL_EXAMPLE", "RDNS_NONE", "HELO_NOT_FQDN",
+  "RBL_SPAMHAUS_XBL",
+]
+absent = ["SPF_ALLOW", "DKIM_ALLOW", "DMARC_POLICY_ALLOW"]
+
+[envelope]
+client_ip = "203.0.113.66"
+helo = "localhost"
+mail_from = "ana@example.com"
+recipients = ["bo@example.org"]
+
+[dns]
+a = { "66.113.0.203.dnsbl.example.net" = ["127.0.0.2"], "66.113.0.203.zen.spamhaus.org" = ["127.0.0.4"] }
+
+[dns.txt]
+"example.com" = ["v=spf1 ip4:192.0.2.0/24 -all"]
+"_dmarc.example.com" = ["v=DMARC1; p=reject"]

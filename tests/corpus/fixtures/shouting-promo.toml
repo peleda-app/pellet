@@ -1,0 +1,16 @@
+description = "Promotional mail with a titled display name, tagged addresses and an exclaiming subject"
+label = "spam"
+expect = [
+  "SUBJECT_ENDS_EXCLAIM", "FROM_NAME_HAS_TITLE", "TAGGED_FROM", "TAGGED_RCPT", "XM_UA_NO_VERSION",
+]
+absent = ["SUBJECT_ENDS_QUESTION", "FAKE_REPLY", "TRUSTED_DOMAIN"]
+
+[envelope]
+client_ip = "203.0.113.120"
+helo = "mx.example.net"
+mail_from = "promo+march@example.net"
+recipients = ["ana+shop@example.com"]
+
+[dns]
+a = { "mx.example.net" = ["203.0.113.120"] }
+ptr = { "203.0.113.120" = ["mx.example.net"] }

@@ -1,0 +1,19 @@
+description = "The signed message arriving through a forwarder outside the sender's SPF: DMARC passes on DKIM alone"
+label = "ham"
+expect = ["SPF_FAIL", "DKIM_ALLOW", "DMARC_POLICY_ALLOW", "DMARC_POLICY_ALLOW_WITH_FAILURES"]
+absent = ["DMARC_POLICY_REJECT", "AUTH_NA"]
+
+[envelope]
+client_ip = "198.51.100.88"
+helo = "relay.example.net"
+mail_from = "ana@example.com"
+recipients = ["bo@example.org"]
+
+[dns]
+a = { "relay.example.net" = ["198.51.100.88"] }
+ptr = { "198.51.100.88" = ["relay.example.net"] }
+
+[dns.txt]
+"example.com" = ["v=spf1 ip4:192.0.2.0/24 -all"]
+"_dmarc.example.com" = ["v=DMARC1; p=reject"]
+"pellet._domainkey.example.com" = ["v=DKIM1; k=ed25519; p=11qYAYKxCrfVS/7TyWQHOg7hcvPapiMlrwIaaPcHURo="]

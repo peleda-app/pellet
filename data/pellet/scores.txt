@@ -1,0 +1,5 @@
+# Scores for symbols Pellet defines itself; loaded after data/stalwart/lists/scores.txt.
+REPUTATION_IP_SPAM = 3.0
+REPUTATION_IP_HAM = -2.0
+REPUTATION_DOMAIN_SPAM = 3.0
+REPUTATION_DOMAIN_HAM = -3.0

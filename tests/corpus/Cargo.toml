@@ -1,0 +1,38 @@
+[package]
+name = "pellet-corpus"
+description = "Golden tests: hand-written messages and the symbols Pellet must emit for them"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+pellet-core.workspace = true
+pellet-engine.workspace = true
+serde.workspace = true
+toml.workspace = true
+
+[dev-dependencies]
+serde.workspace = true
+toml.workspace = true
+pellet-check-auth = { workspace = true, features = ["testing"] }
+pellet-check-content.workspace = true
+pellet-check-ip.workspace = true
+pellet-check-rules.workspace = true
+pellet-check-url.workspace = true
+pellet-check-classifier.workspace = true
+pellet-classifier.workspace = true
+pellet-check-reputation.workspace = true
+pellet-check-pyzor = { workspace = true, features = ["testing"] }
+pellet-state-memory.workspace = true
+pellet-dns = { workspace = true, features = ["testing"] }
+pellet-rules.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "test"

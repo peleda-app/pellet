@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<p>Before</p><![CDATA[ hidden cdata text ]]><p>After the cdata</p>

@@ -1,0 +1,17 @@
+[package]
+name = "pellet-classifier"
+description = "Feature hashing, tokenizers and an online logistic classifier for spam"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "library"

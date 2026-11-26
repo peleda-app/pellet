@@ -1,0 +1,31 @@
+[package]
+name = "pellet-server"
+description = "HTTP API for Pellet: check and learn"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[dependencies]
+pellet-core.workspace = true
+pellet-engine.workspace = true
+async-trait.workspace = true
+pellet-urls.workspace = true
+axum.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+pellet-check = { workspace = true, features = ["testing"] }
+pellet-check-classifier.workspace = true
+pellet-classifier.workspace = true
+tokio.workspace = true
+tower.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "library"

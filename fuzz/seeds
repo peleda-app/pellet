@@ -1,0 +1,5 @@
+pipeline ../tests/corpus/fixtures
+message ../tests/corpus/fixtures
+urls ../tests/corpus/fixtures
+pyzor ../tests/corpus/fixtures
+rules_expr regressions/rules_expr

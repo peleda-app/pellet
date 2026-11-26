@@ -1,0 +1,9 @@
+description = "A Subject field with only spaces"
+label = "spam"
+expect = ["EMPTY_SUBJECT"]
+absent = ["MISSING_SUBJECT"]
+
+[envelope]
+client_ip = "198.51.100.12"
+mail_from = "promo@example.net"
+recipients = ["ana@example.com"]

@@ -1,0 +1,2 @@
+tests/corpus/fixtures/*.eml -text
+crates/check-pyzor/vectors/*.eml -text

@@ -1,0 +1,18 @@
+From: a@example.com
+To: b@example.org
+Subject: t
+Message-ID: <x@example.com>
+Content-Type: multipart/mixed; boundary="o"
+
+--o
+Content-Type: text/plain
+
+Forwarded message below for you
+--o
+Content-Type: message/rfc822
+
+From: c@example.net
+Subject: inner
+
+Inner message body line here
+--o--

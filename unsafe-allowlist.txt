@@ -1,0 +1,2 @@
+# Files that may contain `#![allow(unsafe_code)]` (or `#[allow(unsafe_code)]`).
+# None: Pellet is pure Rust.

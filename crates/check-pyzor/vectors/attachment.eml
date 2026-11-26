@@ -1,0 +1,22 @@
+From: a@example.com
+To: b@example.org
+Subject: t
+Message-ID: <x@example.com>
+Content-Type: multipart/mixed; boundary="m"
+
+--m
+Content-Type: text/plain
+
+Please see the attached report today.
+--m
+Content-Type: text/csv; name="a.csv"
+Content-Disposition: attachment; filename="a.csv"
+
+name,amount,date
+widgets,100,2026
+--m
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQK
+--m--

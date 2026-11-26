@@ -1,0 +1,8 @@
+From: a@example.com
+To: b@example.org
+Subject: t
+Message-ID: <x@example.com>
+Content-Type: text/html; charset=utf-8
+
+<html><head><style>p{color:red}</style><title>Deal</title></head><body><p>Buy cheap <b>watches</b> today only.</p>
+<p>Limited stock available now.</p><br>Free shipping on every order<div>Click <a href='http://example.net'>here</a> to order</div>&amp; save &nbsp; more money</body></html>

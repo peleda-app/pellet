@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<p>sp<b>li</b>t wo<br>rd inside text</p>

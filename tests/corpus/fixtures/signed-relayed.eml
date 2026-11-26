@@ -1,0 +1,17 @@
+DKIM-Signature: v=1; a=ed25519-sha256; s=pellet; d=example.com; c=relaxed/relaxed;
+	h=Message-ID:Date:Subject:To:From; t=1795219234; bh=myuDRpaOGFo1e/VuTktJ/wJ
+	AneOvY5YFSD5T0Tz1Rl0=; b=nyTAjuyT6gOy3n3Qhi4nxNzKku5RFtomP4DoM40WJkWRyvAadj
+	lQJZBP6luFdvGPxYC6u7CELt3yy3vF2IDvBQ==;
+From: Ana Lindqvist <ana@example.com>
+To: Bo Herrera <bo@example.org>
+Subject: Quarterly report draft
+Date: Mon, 9 Mar 2026 14:02:00 +0100
+Message-ID: <report-draft-7@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi Bo,
+
+The draft of the quarterly report is ready for your comments.
+
+Ana

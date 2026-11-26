@@ -1,0 +1,5 @@
+[repo]
+name = "pellet"
+
+[checks]
+fuzz = true

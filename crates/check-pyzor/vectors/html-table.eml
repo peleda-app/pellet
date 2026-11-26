@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<table><tr><td>Cell one text</td><td>Cell two text</td></tr><tr><td>Row two cell</td></tr></table>

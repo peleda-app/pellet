@@ -1,0 +1,31 @@
+[package]
+name = "pellet-check-rules"
+description = "Data-driven rules evaluated by the Pellet expression language"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[dependencies]
+pellet-core.workspace = true
+pellet-check.workspace = true
+pellet-rules.workspace = true
+async-trait.workspace = true
+mail-parser.workspace = true
+psl.workspace = true
+pellet-urls.workspace = true
+pellet-dns.workspace = true
+futures.workspace = true
+
+[dev-dependencies]
+pellet-check = { workspace = true, features = ["testing"] }
+pellet-dns = { workspace = true, features = ["testing"] }
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "implementation"
+implements = "pellet-check"

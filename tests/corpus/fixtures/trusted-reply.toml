@@ -1,0 +1,15 @@
+description = "A reply from a recipient of a message the deployment sent, passing DMARC"
+expect = ["TRUSTED_REPLY", "SPF_ALLOW", "DMARC_POLICY_ALLOW"]
+absent = ["SPOOF_REPLYTO", "SPAM_TRAP", "PYZOR"]
+sent = [{ message_id = "plan-42@example.com", recipients = ["bo@example.org"] }]
+pyzor = { count = 0 }
+
+[envelope]
+client_ip = "192.0.2.25"
+helo = "mail.example.org"
+mail_from = "bo@example.org"
+recipients = ["ana@example.com"]
+
+[dns.txt]
+"example.org" = ["v=spf1 ip4:192.0.2.0/24 -all"]
+"_dmarc.example.org" = ["v=DMARC1; p=reject"]

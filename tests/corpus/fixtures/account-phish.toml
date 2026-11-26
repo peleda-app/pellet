@@ -1,0 +1,13 @@
+description = "A credential phish: the anchor shows the real provider while a redirector leads elsewhere, and a second link goes to a bare IP"
+label = "spam"
+expect = [
+  "PHISHING", "HTTP_TO_HTTPS", "REDIRECTOR_URL", "URL_REDIRECTOR_INSECURE", "HTTP_TO_IP",
+  "WP_COMPROMISED", "MIME_HTML_ONLY",
+]
+absent = ["URL_ONLY", "SUSPICIOUS_URL", "HOMOGRAPH_URL"]
+
+[envelope]
+client_ip = "203.0.113.150"
+helo = "mail.example.net"
+mail_from = "security@example.net"
+recipients = ["ana@example.com"]

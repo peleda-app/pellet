@@ -1,0 +1,27 @@
+[package]
+name = "pellet-eval"
+description = "Evaluation of Pellet over real spam and ham corpora kept outside the repository"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+pellet-core.workspace = true
+pellet-engine.workspace = true
+pellet-rules.workspace = true
+pellet-check-content.workspace = true
+pellet-check-url.workspace = true
+pellet-check-rules.workspace = true
+pellet-check-classifier.workspace = true
+pellet-classifier.workspace = true
+clap.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "test"

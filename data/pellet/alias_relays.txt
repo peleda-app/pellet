@@ -1,0 +1,9 @@
+# Forwarding services that hand out aliases and deliver to the owner's real address, so To
+# names the alias while the envelope recipient is another address. Subdomains count too.
+anonaddy.com
+anonaddy.me
+duck.com
+mozmail.com
+privaterelay.appleid.com
+simplelogin.com
+slmail.me

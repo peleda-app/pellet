@@ -1,0 +1,15 @@
+description = "A HELO name that does not resolve and does not match the client's reverse DNS"
+label = "ham"
+expect = [
+  "HELO_NORES_A_OR_MX", "HELO_IPREV_MISMATCH", "SPF_NA", "DMARC_NA", "ARC_NA", "AUTH_NA",
+]
+absent = ["HELO_BAREIP", "HELO_NOT_FQDN", "RDNS_NONE", "RBL_EXAMPLE"]
+
+[envelope]
+client_ip = "198.51.100.40"
+helo = "smtp.ghost.example"
+mail_from = "newsletter@example.net"
+recipients = ["ana@example.com"]
+
+[dns]
+ptr = { "198.51.100.40" = ["out-40.mailer.example.net"] }

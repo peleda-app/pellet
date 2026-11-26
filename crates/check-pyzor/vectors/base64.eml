@@ -1,0 +1,10 @@
+From: a@example.com
+To: b@example.org
+Subject: t
+Message-ID: <x@example.com>
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+0J/RgNC40LLQtdGCLCDRjdGC0L4g0LTQu9C40L3QvdC+0LUg0YHQvtC+0LHRidC10L3QuNC1LgrQ
+ktGC0L7RgNCw0Y8g0YHRgtGA0L7QutCwINC/0LjRgdGM0LzQsCDQt9C00LXRgdGMLgrQotGA0LXR
+gtGM0Y8g0YHRgtGA0L7QutCwINGBINGC0LXQutGB0YLQvtC8Lgo=

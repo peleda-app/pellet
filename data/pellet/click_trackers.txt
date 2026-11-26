@@ -1,0 +1,21 @@
+# Click-tracking hosts of mail delivery services (click-trackers). Their links rarely show where
+# they lead, so a link to one is not judged as phishing. Subdomains count too.
+awstrack.me
+customeriomail.com
+esclick.me
+exct.net
+hubspotlinks.com
+klclick.com
+mck1.cloud
+mck2.cloud
+mckl.ru
+mckw.ru
+mlsend.com
+musvc2.net
+onelink.me
+pstmrk.it
+rs6.net
+sendibm1.com
+sendibt2.com
+sendibt3.com
+sp1-brevo.net

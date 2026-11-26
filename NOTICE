@@ -1,0 +1,7 @@
+Pellet
+Copyright (c) 2026 Pellet contributors
+
+This product includes spam filter rules, scores and lists from Stalwart Spam Filter Rules
+(https://github.com/stalwartlabs/spam-filter), Copyright (C) 2024 Stalwart Labs LLC, used under
+the MIT license. They live in data/stalwart/, with the license text in data/stalwart/LICENSE-MIT
+and the imported commit in data/stalwart/SOURCE.md.

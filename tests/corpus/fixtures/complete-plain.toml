@@ -1,0 +1,14 @@
+description = "An ordinary personal message with every essential header"
+label = "ham"
+absent = [
+  "MISSING_FROM", "MULTIPLE_FROM", "MISSING_TO", "MISSING_SUBJECT", "EMPTY_SUBJECT",
+  "MISSING_DATE", "MISSING_MID", "MISSING_MIME_VERSION", "MULTIPLE_UNIQUE_HEADERS",
+  "MISSING_ESSENTIAL_HEADERS",
+]
+
+[envelope]
+client_ip = "192.0.2.25"
+helo = "mail.example.com"
+mail_from = "ana@example.com"
+recipients = ["bo@example.org"]
+tls = true

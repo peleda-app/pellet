@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<p>Hex &#x41;&#x42;C entity &#169; test line</p>

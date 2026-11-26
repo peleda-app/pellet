@@ -1,0 +1,49 @@
+# Scored symbols that no registered check emits yet, grouped by why.
+# tests/golden.rs fails when a scored symbol is neither emitted nor listed here,
+# and when a symbol listed here becomes emitted.
+
+[[group]]
+reason = "Verdicts from a language model; out of scope on weak hardware"
+symbols = [
+  "AI_BULK_SPAM_HIGH", "AI_BULK_SPAM_LOW", "AI_BULK_SPAM_MEDIUM", "AI_CREDENTIAL_REQUEST",
+  "AI_ERROR", "AI_IMPERSONATION", "AI_LEGITIMATE_HIGH", "AI_LEGITIMATE_LOW",
+  "AI_LEGITIMATE_MEDIUM", "AI_MALWARE_HIGH", "AI_MALWARE_LOW", "AI_MALWARE_MEDIUM",
+  "AI_NEWSLETTER_HIGH", "AI_NEWSLETTER_LOW", "AI_NEWSLETTER_MEDIUM", "AI_PHISHING_HIGH",
+  "AI_PHISHING_LOW", "AI_PHISHING_MEDIUM", "AI_REQUESTED", "AI_TRANSACTIONAL_HIGH",
+  "AI_TRANSACTIONAL_LOW", "AI_TRANSACTIONAL_MEDIUM", "AI_UNCERTAIN", "AI_UNSOLICITED_SALES_HIGH",
+  "AI_UNSOLICITED_SALES_LOW", "AI_UNSOLICITED_SALES_MEDIUM",
+]
+
+[[group]]
+reason = "DKIM2 is still a draft; mail-auth can verify it once senders use it"
+symbols = [
+  "DKIM2_ALLOW", "DKIM2_NA", "DKIM2_PERMFAIL", "DKIM2_REJECT", "DKIM2_TEMPFAIL",
+]
+
+[[group]]
+reason = "DCC: its client and protocol are not under a free license; Pyzor covers collaborative digests"
+symbols = [
+  "DCC_BULK",
+]
+
+[[group]]
+reason = "Scored, but neither the imported data nor any Pellet check defines when they apply"
+symbols = [
+  "RBL_SEM_IPV6", "RBL_SENDERSCORE_REPUT_UNKNOWN",
+]
+
+[[group]]
+reason = "The Sender Score list is disabled in the imported rules data (enable = false)"
+symbols = [
+  "RBL_SENDERSCORE_BLOCKED", "RBL_SENDERSCORE_BOT", "RBL_SENDERSCORE_NA", "RBL_SENDERSCORE_NA_BOT",
+  "RBL_SENDERSCORE_PRST", "RBL_SENDERSCORE_PRST_BOT", "RBL_SENDERSCORE_PRST_NA",
+  "RBL_SENDERSCORE_PRST_NA_BOT", "RBL_SENDERSCORE_SCORE", "RBL_SENDERSCORE_SCORE_NA",
+  "RBL_SENDERSCORE_SCORE_PRST", "RBL_SENDERSCORE_SCORE_PRST_NA",
+  "RBL_SENDERSCORE_SCORE_SUS_ATT_NA", "RBL_SENDERSCORE_SUS_ATT", "RBL_SENDERSCORE_SUS_ATT_NA",
+  "RBL_SENDERSCORE_SUS_ATT_NA_BOT", "RBL_SENDERSCORE_SUS_ATT_PRST_NA",
+  "RBL_SENDERSCORE_SUS_ATT_PRST_NA_BOT",
+]
+
+[[group]]
+reason = "Meaning not settled by the symbol name or the rules that read it; left out rather than guessed"
+symbols = ["FORGED_RCVD_TRAIL", "HELO_IP_A", "SUSPICIOUS_RECIPS"]

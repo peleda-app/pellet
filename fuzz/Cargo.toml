@@ -1,0 +1,106 @@
+[package]
+name = "pellet-fuzz"
+version = "0.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[package.metadata.dojo]
+kind = "fuzz"
+
+[workspace]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+async-trait = "0.1"
+axum = "0.8"
+tokio = { version = "1", features = ["rt", "time"] }
+tower = { version = "0.5", features = ["util"] }
+pellet-core = { path = "../crates/core" }
+pellet-check = { path = "../crates/check", features = ["testing"] }
+pellet-dns = { path = "../crates/dns", features = ["testing"] }
+pellet-engine = { path = "../crates/engine" }
+pellet-urls = { path = "../crates/urls" }
+pellet-rules = { path = "../crates/rules" }
+pellet-feeds = { path = "../crates/feeds" }
+pellet-classifier = { path = "../crates/classifier" }
+pellet-server = { path = "../crates/server" }
+pellet-state-memory = { path = "../crates/state-memory" }
+pellet-check-auth = { path = "../crates/check-auth", features = ["testing"] }
+pellet-check-classifier = { path = "../crates/check-classifier" }
+pellet-check-content = { path = "../crates/check-content" }
+pellet-check-ip = { path = "../crates/check-ip" }
+pellet-check-pyzor = { path = "../crates/check-pyzor", features = ["testing"] }
+pellet-check-reputation = { path = "../crates/check-reputation" }
+pellet-check-rules = { path = "../crates/check-rules" }
+pellet-check-url = { path = "../crates/check-url" }
+
+
+[[bin]]
+name = "message"
+path = "fuzz_targets/message.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "urls"
+path = "fuzz_targets/urls.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "pipeline"
+path = "fuzz_targets/pipeline.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "auth"
+path = "fuzz_targets/auth.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "server"
+path = "fuzz_targets/server.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "feeds"
+path = "fuzz_targets/feeds.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "classifier"
+path = "fuzz_targets/classifier.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "pyzor"
+path = "fuzz_targets/pyzor.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "rules_expr"
+path = "fuzz_targets/rules_expr.rs"
+test = false
+doc = false
+bench = false

@@ -1,0 +1,9 @@
+description = "Bulk mail to a spam trap address; Pyzor has seen it a few times only"
+expect = ["SPAM_TRAP"]
+absent = ["PYZOR", "TRUSTED_REPLY", "SPOOF_REPLYTO"]
+pyzor = { count = 2 }
+
+[envelope]
+client_ip = "192.0.2.80"
+mail_from = "dana@example.net"
+recipients = ["bo@example.org", "trap@example.org"]

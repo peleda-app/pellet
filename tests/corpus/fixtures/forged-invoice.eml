@@ -1,0 +1,11 @@
+Received: from user (unknown [203.0.113.77]) by relay.example.net with SMTP id 9; Tue, 10 Mar 2026 01:00:00 +0000
+From: "billing@example.com" <collect@example.net>
+Reply-To: payments@example.info
+To: < bo@example.org >
+Subject: =?utf-8?B?SW52b2ljZSBPVkVSRFVF?=
+Date: Sun, 1 Mar 2026 01:00:00 +0000
+Message-ID: 4821@localhost
+Mime-Version: 1.0
+Content-Transfer-Encoding: 7BIT
+
+Please pay the attached invoice.

@@ -1,0 +1,24 @@
+[package]
+name = "pellet-dns"
+description = "DNS lookup contract for Pellet checks"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[features]
+testing = []
+
+[dependencies]
+async-trait.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[package.metadata.dojo]
+kind = "contract"

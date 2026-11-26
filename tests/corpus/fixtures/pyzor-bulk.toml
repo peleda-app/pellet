@@ -1,0 +1,10 @@
+description = "Bulk mail that many Pyzor users reported"
+label = "spam"
+expect = ["PYZOR"]
+absent = ["SPAM_TRAP"]
+pyzor = { count = 40 }
+
+[envelope]
+client_ip = "192.0.2.81"
+mail_from = "deals@example.net"
+recipients = ["bo@example.org"]

@@ -1,0 +1,10 @@
+description = "A client submits without Date and Message-ID; the submission server adds them"
+label = "ham"
+absent = ["MISSING_DATE", "MISSING_MID", "MISSING_ESSENTIAL_HEADERS"]
+
+[envelope]
+client_ip = "192.0.2.40"
+mail_from = "bo@example.org"
+recipients = ["ana@example.com"]
+tls = true
+authenticated = true

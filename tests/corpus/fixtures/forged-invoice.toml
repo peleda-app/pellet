@@ -1,0 +1,14 @@
+description = "A forged invoice: a display name posing as another address, a foreign Reply-To, a bad Message-ID and an old date"
+label = "spam"
+expect = [
+  "SPOOF_DISPLAY_NAME", "FROM_NEQ_ENV_FROM", "HAS_REPLYTO", "REPLYTO_DOM_NEQ_FROM_DOM",
+  "TO_WRAPPED_IN_SPACES", "SUBJ_EXCESS_BASE64", "MID_MISSING_BRACKETS", "MID_RHS_NOT_FQDN",
+  "DATE_IN_PAST", "MV_CASE", "CTE_CASE", "RCVD_COUNT_ONE", "RCVD_NO_TLS_LAST", "RCVD_HELO_USER",
+]
+absent = ["FROM_EQ_ENV_FROM", "FORGED_SENDER", "FROM_NEQ_DISPLAY_NAME", "REPLYTO_EQ_FROM", "RCVD_TLS_LAST"]
+
+[envelope]
+client_ip = "203.0.113.77"
+helo = "relay.example.net"
+mail_from = "bounce@example.net"
+recipients = ["bo@example.org"]

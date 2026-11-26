@@ -1,0 +1,9 @@
+description = "Forged headers with two From and two Subject fields"
+label = "spam"
+expect = ["MULTIPLE_FROM", "MULTIPLE_UNIQUE_HEADERS"]
+absent = ["MISSING_FROM", "MISSING_ESSENTIAL_HEADERS"]
+
+[envelope]
+client_ip = "203.0.113.9"
+mail_from = "bounce@example.net"
+recipients = ["bo@example.org"]

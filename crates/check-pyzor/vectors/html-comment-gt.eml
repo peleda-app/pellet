@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<p>Visible text one</p><!-- a > b -- still comment --><p>Visible text two</p>

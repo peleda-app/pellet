@@ -1,0 +1,22 @@
+description = "A well-formed newsletter relayed over TLS from the sender's own submission server"
+label = "ham"
+expect = [
+  "FROM_HAS_DN", "FROM_EQ_ENV_FROM", "TO_DN_ALL", "TO_MATCH_ENVRCPT_ALL", "RCPT_COUNT_ONE",
+  "HAS_LIST_UNSUB", "X_HDR_LIST_UNSUBSCRIBE", "MAILLIST", "PRECEDENCE_BULK", "HAS_X_PRIO_THREE",
+  "RCVD_COUNT_TWO", "RCVD_TLS_ALL", "RCVD_TLS_LAST", "RCVD_VIA_SMTP_AUTH", "MID_RHS_MATCH_FROM",
+]
+absent = [
+  "DATE_IN_PAST", "DATE_IN_FUTURE", "INVALID_DATE", "INVALID_MSGID", "MV_CASE", "RCVD_NO_TLS_LAST",
+  "SUBJ_ALL_CAPS",
+]
+
+[envelope]
+client_ip = "192.0.2.60"
+helo = "out-3.mailer.example.net"
+mail_from = "news@example.net"
+recipients = ["ana@example.com"]
+tls = true
+
+[dns]
+a = { "out-3.mailer.example.net" = ["192.0.2.60"] }
+ptr = { "192.0.2.60" = ["out-3.mailer.example.net"] }

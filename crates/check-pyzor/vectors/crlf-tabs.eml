@@ -1,0 +1,8 @@
+From: a@example.com
+To: b@example.org
+Subject: t
+Message-ID: <x@example.com>
+
+Tabs	here and   spaces	mixed in this line
+Another line	with tabs inside it
+form feed line text here

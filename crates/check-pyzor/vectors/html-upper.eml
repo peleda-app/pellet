@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<HTML><BODY><P>Upper Case Tags Here</P><SCRIPT>bad()</SCRIPT><P>More visible text</P></BODY></HTML>

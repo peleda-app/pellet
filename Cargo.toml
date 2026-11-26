@@ -1,0 +1,64 @@
+[workspace]
+resolver = "3"
+members = ["apps/*", "crates/*", "tests/corpus", "tests/load", "tests/eval"]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.99"
+repository = "https://github.com/peleda-app/pellet"
+
+[workspace.dependencies]
+pellet-core = { path = "crates/core", version = "0.0.0" }
+pellet-check = { path = "crates/check", version = "0.0.0" }
+pellet-dns = { path = "crates/dns", version = "0.0.0" }
+pellet-dns-hickory = { path = "crates/dns-hickory", version = "0.0.0" }
+pellet-check-ip = { path = "crates/check-ip", version = "0.0.0" }
+pellet-check-auth = { path = "crates/check-auth", version = "0.0.0" }
+pellet-rules = { path = "crates/rules", version = "0.0.0" }
+pellet-urls = { path = "crates/urls", version = "0.0.0" }
+pellet-feeds = { path = "crates/feeds", version = "0.0.0" }
+pellet-fetch = { path = "crates/fetch", version = "0.0.0" }
+pellet-fetch-http = { path = "crates/fetch-http", version = "0.0.0" }
+pellet-classifier = { path = "crates/classifier", version = "0.0.0" }
+pellet-check-classifier = { path = "crates/check-classifier", version = "0.0.0" }
+pellet-check-reputation = { path = "crates/check-reputation", version = "0.0.0" }
+pellet-check-pyzor = { path = "crates/check-pyzor", version = "0.0.0" }
+pellet-state-memory = { path = "crates/state-memory", version = "0.0.0" }
+pellet-check-url = { path = "crates/check-url", version = "0.0.0" }
+pellet-check-rules = { path = "crates/check-rules", version = "0.0.0" }
+pellet-state = { path = "crates/state", version = "0.0.0" }
+pellet-engine = { path = "crates/engine", version = "0.0.0" }
+pellet-server = { path = "crates/server", version = "0.0.0" }
+pellet-check-content = { path = "crates/check-content", version = "0.0.0" }
+
+anyhow = "1"
+axum = "0.8"
+async-trait = "0.1"
+clap = { version = "4", features = ["derive"] }
+flate2 = "1"
+futures = "0.3"
+hickory-resolver = "0.26"
+mail-parser = "1"
+md-5 = "0.11"
+memchr = "2"
+sha1 = "0.11"
+psl = "2"
+reqwest = { version = "0.13", default-features = false, features = ["rustls"] }
+mail-auth = { version = "0.15", default-features = false, features = ["rust-crypto", "arc", "dns-hickory"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tower = { version = "0.5", features = ["util"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync", "time"] }
+toml = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }

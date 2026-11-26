@@ -1,0 +1,5 @@
+From: a@example.com
+Subject: t
+Content-Type: text/html; charset=utf-8
+
+<p>Image <img src='x.png' alt='Alt text here'> follows</p>

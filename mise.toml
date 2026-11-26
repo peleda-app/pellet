@@ -1,0 +1,37 @@
+[tools]
+rust = "1.99"
+
+[tasks.check]
+description = "Everything CI runs on every push"
+run = [
+  "bash scripts/check-unsafe.sh",
+  "cargo fmt --all --check",
+  "cargo fmt --check --manifest-path fuzz/Cargo.toml",
+  "cargo check --manifest-path fuzz/Cargo.toml --bins",
+  "cargo clippy --workspace --all-targets -- -D warnings",
+  "cargo test --workspace",
+  "if [ -f ../dojo/Cargo.toml ]; then cargo run -q --manifest-path ../dojo/Cargo.toml -p dojo -- check .; else echo 'dojo is not checked out beside pellet; skipping dojo check'; fi",
+]
+
+[tasks.fuzz]
+description = "Fuzz: `mise run fuzz -- all 60` (every target 60 s), `mise run fuzz -- <target> [secs]`, `build`, `list`, `replay <target> <file>`"
+run = "bash fuzz/run.sh"
+
+[tasks.dojo]
+description = "Workspace rules check (needs dojo beside this repository)"
+run = "cargo run -q --manifest-path ../dojo/Cargo.toml -p dojo -- check ."
+
+[tasks.load]
+description = "Load report and budgets, release build"
+run = [
+  "cargo run --release -q -p pellet-load",
+  "cargo test --release -q -p pellet-load",
+]
+
+[tasks.network]
+description = "Tests that talk to real third-party servers (public.pyzor.org)"
+run = "cargo test -q -p pellet-check-pyzor -- --ignored"
+
+[tasks.eval]
+description = "Evaluation over real spam and ham downloaded to a cache outside the repository"
+run = "scripts/eval.sh"

@@ -1,0 +1,11 @@
+From: Account Security <security@example.net>
+To: ana@example.com
+Subject: Unusual sign-in to your account
+Date: Thu, 12 Mar 2026 07:45:00 +0000
+Message-ID: <sec-901@example.net>
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<html><body><p>We noticed an unusual sign-in to your account from a new device. If this was not you, secure your account now to keep your files and messages safe.</p>
+<p><a href="http://redirect.example.net/c?u=https%3A%2F%2Flogin.example.info%2Fverify">https://accounts.example.com/security</a></p>
+<p><a href="http://192.0.2.99/wp-content/verify.php">Review activity</a></p></body></html>

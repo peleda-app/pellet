@@ -1,0 +1,15 @@
+Received: from out-3.mailer.example.net (out-3.mailer.example.net [192.0.2.60]) by mx.example.org with ESMTPS id 7; Thu, 12 Mar 2026 09:00:02 +0000
+Received: from app.example.net by out-3.mailer.example.net with ESMTPSA id 6; Thu, 12 Mar 2026 09:00:01 +0000
+From: Example News <news@example.net>
+To: Ana Lindqvist <ana@example.com>
+Subject: March product news
+Date: Thu, 12 Mar 2026 09:00:00 +0000
+Message-ID: <news-2026-03.ana@example.net>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+List-Id: <news.example.net>
+List-Unsubscribe: <mailto:unsubscribe@example.net>
+Precedence: bulk
+X-Priority: 3
+
+What is new this month.

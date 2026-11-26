@@ -1,0 +1,14 @@
+description = "A forged reply to a message the deployment sent, failing DMARC of the recipient's domain"
+label = "spam"
+expect = ["SPOOF_REPLYTO", "DMARC_POLICY_REJECT"]
+absent = ["TRUSTED_REPLY"]
+sent = [{ message_id = "plan-42@example.com", recipients = ["bo@example.org"] }]
+
+[envelope]
+client_ip = "203.0.113.70"
+mail_from = "bo@example.org"
+recipients = ["ana@example.com"]
+
+[dns.txt]
+"example.org" = ["v=spf1 ip4:192.0.2.0/24 -all"]
+"_dmarc.example.org" = ["v=DMARC1; p=reject"]
